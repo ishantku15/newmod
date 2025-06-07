@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODMASTER Admin Panel</title>
+    <meta name="description" content="Admin panel for managing MODMASTER website content">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+    
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-screen">
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <div class="admin-logo">
+                        <span class="logo-text">MODMASTER</span>
+                        <span class="logo-subtitle">ADMIN PANEL</span>
+                    </div>
+                </div>
+                
+                <form id="login-form" class="login-form">
+                    <div class="form-group">
+                        <input type="text" id="username" required class="form-input" placeholder=" ">
+                        <label class="form-label">Username</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="password" id="password" required class="form-input" placeholder=" ">
+                        <label class="form-label">Password</label>
+                    </div>
+                    
+                    <button type="submit" class="btn-login">
+                        <span>Access Panel</span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M21 12H9"></path>
+                        </svg>
+                    </button>
+                </form>
+                
+                <div class="login-footer">
+                    <p>Authorized personnel only</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="admin-dashboard" class="admin-dashboard hidden">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="admin-nav">
+                <div class="nav-left">
+                    <div class="logo">
+                        <span class="logo-text">MODMASTER</span>
+                        <span class="logo-subtitle">ADMIN</span>
+                    </div>
+                </div>
+                
+                <div class="nav-center">
+                    <div class="nav-tabs">
+                        <button class="nav-tab active" data-tab="dashboard">Dashboard</button>
+                        <button class="nav-tab" data-tab="apps">Apps</button>
+                        <button class="nav-tab" data-tab="categories">Categories</button>
+                        <button class="nav-tab" data-tab="settings">Settings</button>
+                        <button class="nav-tab" data-tab="menu">Menu</button>
+                        <button class="nav-tab" data-tab="export">Export</button>
+                    </div>
+                </div>
+                
+                <div class="nav-right">
+                    <button class="btn-logout" id="logout-btn">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"></path>
+                        </svg>
+                        <span>Logout</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Dashboard Tab -->
+            <div id="dashboard-tab" class="tab-content active">
+                <div class="dashboard-header">
+                    <h1>Dashboard Overview</h1>
+                    <p>Manage your MODMASTER website content</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📱</div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="total-apps">0</div>
+                            <div class="stat-label">Total Apps</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="featured-apps">0</div>
+                            <div class="stat-label">Featured Apps</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🔥</div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="trending-apps">0</div>
+                            <div class="stat-label">Trending Apps</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="total-downloads">0</div>
+                            <div class="stat-label">Total Downloads</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list" id="activity-list">
+                        <!-- Activity items will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apps Tab -->
+            <div id="apps-tab" class="tab-content">
+                <div class="apps-header">
+                    <div class="apps-title">
+                        <h1>Manage Apps</h1>
+                        <p>Add, edit, or remove apps from your collection</p>
+                    </div>
+                    
+                    <button class="btn-primary" id="add-app-btn">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        <span>Add New App</span>
+                    </button>
+                </div>
+                
+                <div class="apps-filters">
+                    <div class="filter-group">
+                        <select id="category-filter" class="filter-select">
+                            <option value="all">All Categories</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <input type="text" id="search-apps" class="filter-input" placeholder="Search apps...">
+                    </div>
+                </div>
+                
+                <div class="apps-table-container">
+                    <table class="apps-table">
+                        <thead>
+                            <tr>
+                                <th>Icon</th>
+                                <th>Name</th>
+                                <th>Version</th>
+                                <th>Category</th>
+                                <th>Rating</th>
+                                <th>Downloads</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="apps-table-body">
+                            <!-- Apps will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Categories Tab -->
+            <div id="categories-tab" class="tab-content">
+                <div class="categories-header">
+                    <div class="categories-title">
+                        <h1>Manage Categories</h1>
+                        <p>Create and manage app categories for better organization</p>
+                    </div>
+                    
+                    <button class="btn-primary" id="add-category-btn">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        <span>Add Category</span>
+                    </button>
+                </div>
+                
+                <div class="categories-list" id="categories-list">
+                    <!-- Categories will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Settings Tab -->
+            <div id="settings-tab" class="tab-content">
+                <div class="settings-header">
+                    <h1>Website Settings</h1>
+                    <p>Configure your website appearance and behavior</p>
+                </div>
+                
+                <div class="settings-sections">
+                    <div class="settings-section">
+                        <h2>General Settings</h2>
+                        <div class="settings-grid">
+                            <div class="form-group">
+                                <label class="form-label">Site Name</label>
+                                <input type="text" id="site-name" class="form-input" placeholder="MODMASTER">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Site Description</label>
+                                <textarea id="site-description" class="form-input" rows="3" placeholder="Download Premium Mod APKs for Free"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Contact Email</label>
+                                <input type="email" id="contact-email" class="form-input" placeholder="admin@modmaster.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Official Website</label>
+                                <input type="url" id="official-website" class="form-input" placeholder="https://ishant.shop">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-section">
+                        <h2>Theme Colors</h2>
+                        <div class="color-grid">
+                            <div class="color-group">
+                                <label class="form-label">Primary Color</label>
+                                <div class="color-input-wrapper">
+                                    <input type="color" id="primary-color" class="color-input" value="#00f3ff">
+                                    <input type="text" class="color-text" value="#00f3ff">
+                                </div>
+                            </div>
+                            
+                            <div class="color-group">
+                                <label class="form-label">Secondary Color</label>
+                                <div class="color-input-wrapper">
+                                    <input type="color" id="secondary-color" class="color-input" value="#b829ff">
+                                    <input type="text" class="color-text" value="#b829ff">
+                                </div>
+                            </div>
+                            
+                            <div class="color-group">
+                                <label class="form-label">Accent Color</label>
+                                <div class="color-input-wrapper">
+                                    <input type="color" id="accent-color" class="color-input" value="#39ff14">
+                                    <input type="text" class="color-text" value="#39ff14">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-section">
+                        <h2>Tutorial Video</h2>
+                        <div class="form-group">
+                            <label class="form-label">YouTube Video URL</label>
+                            <input type="url" id="tutorial-video" class="form-input" placeholder="https://www.youtube.com/embed/...">
+                            <small class="form-help">Use YouTube embed URL format</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="settings-actions">
+                    <button class="btn-primary" id="save-settings">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 21H5a2  2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"></path>
+                            <polyline points="17,21 17,13 7,13 7,21"></polyline>
+                            <polyline points="7,3 7,8 15,8"></polyline>
+                        </svg>
+                        <span>Save Settings</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Menu Tab -->
+            <div id="menu-tab" class="tab-content">
+                <div class="menu-header">
+                    <div class="menu-title">
+                        <h1>Navigation Menu</h1>
+                        <p>Manage website navigation menu items</p>
+                    </div>
+                    
+                    <button class="btn-primary" id="add-menu-item">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        <span>Add Menu Item</span>
+                    </button>
+                </div>
+                
+                <div class="menu-list" id="menu-list">
+                    <!-- Menu items will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Export Tab -->
+            <div id="export-tab" class="tab-content">
+                <div class="export-header">
+                    <h1>Export & Backup</h1>
+                    <p>Download your website data and create backups</p>
+                </div>
+                
+                <div class="export-sections">
+                    <div class="export-section">
+                        <div class="export-card">
+                            <div class="export-icon">📄</div>
+                            <div class="export-info">
+                                <h3>Export JSON Data</h3>
+                                <p>Download the complete website data as JSON file</p>
+                            </div>
+                            <button class="btn-export" id="export-json">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"></path>
+                                </svg>
+                                <span>Download</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="export-section">
+                        <div class="export-card">
+                            <div class="export-icon">📊</div>
+                            <div class="export-info">
+                                <h3>Export Apps List</h3>
+                                <p>Download apps data in CSV format</p>
+                            </div>
+                            <button class="btn-export" id="export-csv">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"></path>
+                                </svg>
+                                <span>Download</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="export-section">
+                        <div class="export-card">
+                            <div class="export-icon">💾</div>
+                            <div class="export-info">
+                                <h3>Create Backup</h3>
+                                <p>Generate a complete backup of all data</p>
+                            </div>
+                            <button class="btn-export" id="create-backup">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"></path>
+                                </svg>
+                                <span>Create</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="import-section">
+                    <h2>Import Data</h2>
+                    <div class="import-card">
+                        <div class="import-area" id="import-area">
+                            <div class="import-icon">📁</div>
+                            <div class="import-text">
+                                <h3>Import JSON Data</h3>
+                                <p>Drag and drop your JSON file here or click to browse</p>
+                            </div>
+                            <input type="file" id="import-file" accept=".json" hidden>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- App Modal -->
+    <div id="app-modal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 id="modal-title">Add New App</h2>
+                <button class="modal-close" id="app-modal-close">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <form id="app-form" class="app-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">App Name *</label>
+                            <input type="text" id="app-name" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Version *</label>
+                            <input type="text" id="app-version" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Category *</label>
+                            <select id="app-category" class="form-input" required>
+                                <option value="">Select Category</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Rating</label>
+                            <input type="number" id="app-rating" class="form-input" min="1" max="5" step="0.1" value="4.0">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Downloads</label>
+                            <input type="text" id="app-downloads" class="form-input" placeholder="1M+">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Size</label>
+                            <input type="text" id="app-size" class="form-input" placeholder="25MB">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Description *</label>
+                        <textarea id="app-description" class="form-input" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Long Description</label>
+                        <textarea id="app-long-description" class="form-input" rows="5"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Features (one per line)</label>
+                        <textarea id="app-features" class="form-input" rows="4" placeholder="Feature 1&#10;Feature 2&#10;Feature 3"></textarea>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Icon URL (Google Drive)</label>
+                            <input type="url" id="app-icon" class="form-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Image URL (Google Drive)</label>
+                            <input type="url" id="app-image" class="form-input">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Download URL (Google Drive) *</label>
+                        <input type="url" id="app-download-url" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Requirements</label>
+                            <input type="text" id="app-requirements" class="form-input" placeholder="Android 5.0+">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Developer</label>
+                            <input type="text" id="app-developer" class="form-input">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Tags (comma separated)</label>
+                        <input type="text" id="app-tags" class="form-input" placeholder="gaming, action, adventure">
+                    </div>
+
+                    <!-- SEO Section -->
+                    <div class="seo-section">
+                        <h3>SEO Optimization</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">SEO Title</label>
+                                <input type="text" id="seo-title" class="form-input" placeholder="App Name - Download Mod APK">
+                                <small class="form-help">Optimized title for search engines (50-60 characters)</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">SEO Slug</label>
+                                <input type="text" id="seo-slug" class="form-input" placeholder="app-name-mod-apk">
+                                <small class="form-help">URL-friendly version of the app name</small>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">SEO Description</label>
+                            <textarea id="seo-description" class="form-input" rows="3" placeholder="Download App Name APK with premium features unlocked..."></textarea>
+                            <small class="form-help">Meta description for search engines (150-160 characters)</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">SEO Keywords</label>
+                            <input type="text" id="seo-keywords" class="form-input" placeholder="app name, mod apk, premium features">
+                            <small class="form-help">Comma-separated keywords for better search visibility</small>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="app-featured">
+                            <span class="checkbox-custom"></span>
+                            Featured App
+                        </label>
+                        
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="app-trending">
+                            <span class="checkbox-custom"></span>
+                            Trending App
+                        </label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" id="cancel-app">Cancel</button>
+                        <button type="submit" class="btn-primary">
+                            <span id="save-app-text">Save App</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Modal -->
+    <div id="category-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="category-modal-title">Add Category</h2>
+                <button class="modal-close" id="category-modal-close">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <form id="category-form" class="category-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Category Name *</label>
+                            <input type="text" id="category-name" class="form-input" required placeholder="apps">
+                            <small class="form-help">Lowercase, no spaces (used in URLs)</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Display Name *</label>
+                            <input type="text" id="category-display-name" class="form-input" required placeholder="Apps">
+                            <small class="form-help">Name shown to users</small>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Description</label>
+                        <textarea id="category-description" class="form-input" rows="2" placeholder="Mobile applications and utilities"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Icon (Emoji)</label>
+                        <input type="text" id="category-icon" class="form-input" placeholder="📱" maxlength="2">
+                        <small class="form-help">Single emoji to represent the category</small>
+                    </div>
+
+                    <!-- SEO Section for Categories -->
+                    <div class="seo-section">
+                        <h3>Category SEO</h3>
+                        <div class="form-group">
+                            <label class="form-label">SEO Title</label>
+                            <input type="text" id="category-seo-title" class="form-input" placeholder="Modded Android Apps - Download Premium APKs">
+                            <small class="form-help">SEO title for category pages</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">SEO Description</label>
+                            <textarea id="category-seo-description" class="form-input" rows="3" placeholder="Download premium modded Android apps with unlocked features..."></textarea>
+                            <small class="form-help">Meta description for category pages</small>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="category-active" checked>
+                            <span class="checkbox-custom"></span>
+                            Active Category
+                        </label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" id="cancel-category">Cancel</button>
+                        <button type="submit" class="btn-primary">
+                            <span id="save-category-text">Save Category</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Item Modal -->
+    <div id="menu-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="menu-modal-title">Add Menu Item</h2>
+                <button class="modal-close" id="menu-modal-close">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <form id="menu-form" class="menu-form">
+                    <div class="form-group">
+                        <label class="form-label">Menu Name *</label>
+                        <input type="text" id="menu-name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Menu Link *</label>
+                        <input type="text" id="menu-href" class="form-input" required placeholder="#section or https://...">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" id="cancel-menu">Cancel</button>
+                        <button type="submit" class="btn-primary">
+                            <span id="save-menu-text">Save Menu Item</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <span id="notification-message"></span>
+            <button id="notification-close">&times;</button>
+        </div>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>

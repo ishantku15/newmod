@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="app-title">App Details - MODMASTER</title>
+    <meta name="description" id="app-description" content="Download premium mod APK with enhanced features">
+    <meta name="keywords" id="app-keywords" content="mod apk, android, premium, free download">
+    <meta name="author" content="Ishant Webworks">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" id="og-title" content="App Details - MODMASTER">
+    <meta property="og:description" id="og-description" content="Download premium mod APK with enhanced features">
+    <meta property="og:type" content="website">
+    <meta property="og:url" id="og-url" content="">
+    <meta property="og:image" id="og-image" content="">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="twitter-title" content="App Details - MODMASTER">
+    <meta name="twitter:description" id="twitter-description" content="Download premium mod APK with enhanced features">
+    <meta name="twitter:image" id="twitter-image" content="">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json" id="structured-data">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "",
+        "description": "",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Android",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "MODMASTER",
+            "url": "https://modmaster.github.io"
+        }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for app detail page */
+        .app-detail-hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .app-detail-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(0, 243, 255, 0.1) 0%, transparent 70%);
+        }
+        
+        .app-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .app-detail-header {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+        
+        .app-detail-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 3px solid var(--border-color);
+            box-shadow: var(--shadow-primary);
+        }
+        
+        .app-detail-info h1 {
+            font-family: var(--font-primary);
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 10px var(--primary-color);
+        }
+        
+        .app-detail-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+        
+        .app-detail-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .app-detail-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--warning-color);
+        }
+        
+        .app-detail-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .btn-download-main {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            border: none;
+            border-radius: 12px;
+            color: var(--bg-primary);
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(57, 255, 20, 0.4);
+        }
+        
+        .btn-download-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(57, 255, 20, 0.6);
+        }
+        
+        .btn-tutorial {
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .btn-tutorial:hover {
+            background: var(--primary-color);
+            color: var(--bg-primary);
+        }
+        
+        .app-detail-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+        
+        .app-detail-main {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        
+        .app-detail-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .detail-section {
+            background: var(--bg-glass);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .detail-section h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .detail-section h3 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .detail-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: rgba(0, 243, 255, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(0, 243, 255, 0.2);
+        }
+        
+        .feature-item svg {
+            color: var(--accent-color);
+            flex-shrink: 0;
+        }
+        
+        .feature-item span {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        .app-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        .stat-item {
+            background: rgba(26, 26, 46, 0.5);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        
+        .stat-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+        
+        .stat-name {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .app-screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .screenshot {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .screenshot:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-primary);
+        }
+        
+        .requirements-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .requirement-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .requirement-item:last-child {
+            border-bottom: none;
+        }
+        
+        .requirement-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .requirement-value {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .breadcrumb-separator {
+            color: var(--text-muted);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .app-detail-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .app-detail-header {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1.5rem;
+            }
+            
+            .app-detail-icon {
+                justify-self: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .app-detail-hero {
+                padding: 6rem 0 3rem;
+            }
+            
+            .app-detail-container {
+                padding: 0 1rem;
+            }
+            
+            .app-detail-info h1 {
+                font-size: 2rem;
+            }
+            
+            .app-detail-icon {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .detail-section {
+                padding: 1.5rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .app-stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .app-screenshots {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <span class="logo-text">MODMASTER</span>
+                    <span class="logo-subtitle">MOD APK HUB</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#apps" class="nav-link">Apps</a>
+                <a href="index.html#games" class="nav-link">Games</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="search-btn" id="search-btn">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="M21 21l-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- App Detail Hero -->
+        <section class="app-detail-hero">
+            <div class="app-detail-container">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span id="breadcrumb-category">Apps</span>
+                    <span class="breadcrumb-separator">›</span>
+                    <span id="breadcrumb-app">App Details</span>
+                </nav>
+                
+                <!-- App Header -->
+                <div class="app-detail-header">
+                    <img id="app-icon" src="" alt="" class="app-detail-icon" loading="lazy">
+                    
+                    <div class="app-detail-info">
+                        <h1 id="app-name">App Name</h1>
+                        
+                        <div class="app-detail-meta">
+                            <span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                                </svg>
+                                Version <span id="app-version">1.0.0</span>
+                            </span>
+                            
+                            <span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path>
+                                </svg>
+                                <span id="app-size">25MB</span>
+                            </span>
+                            
+                            <span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"></path>
+                                </svg>
+                                <span id="app-downloads">1M+</span>
+                            </span>
+                            
+                            <div class="app-detail-rating">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                                <span id="app-rating">4.5</span>
+                            </div>
+                        </div>
+                        
+                        <p id="app-short-description">Enhanced app with premium features unlocked.</p>
+                    </div>
+                    
+                    <div class="app-detail-actions">
+                        <a href="#" id="download-btn" class="btn-download-main">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"></path>
+                            </svg>
+                            <span>Download Now</span>
+                        </a>
+                        
+                        <button class="btn-tutorial" id="tutorial-btn">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <polygon points="5,3 19,12 5,21"></polygon>
+                            </svg>
+                            <span>How to Install</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Detail Content -->
+        <section class="apps-section">
+            <div class="app-detail-container">
+                <div class="app-detail-content">
+                    <!-- Main Content -->
+                    <div class="app-detail-main">
+                        <!-- Description -->
+                        <div class="detail-section">
+                            <h2>About This App</h2>
+                            <p id="app-long-description">
+                                Detailed description of the app will be loaded here...
+                            </p>
+                        </div>
+                        
+                        <!-- Features -->
+                        <div class="detail-section">
+                            <h2>Key Features</h2>
+                            <div class="features-grid" id="features-grid">
+                                <!-- Features will be loaded here -->
+                            </div>
+                        </div>
+                        
+                        <!-- Screenshots -->
+                        <div class="detail-section">
+                            <h2>Screenshots</h2>
+                            <div class="app-screenshots" id="app-screenshots">
+                                <!-- Screenshots will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sidebar -->
+                    <div class="app-detail-sidebar">
+                        <!-- App Stats -->
+                        <div class="detail-section">
+                            <h3>App Information</h3>
+                            <div class="app-stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-value" id="stat-rating">4.5</div>
+                                    <div class="stat-name">Rating</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value" id="stat-downloads">1M+</div>
+                                    <div class="stat-name">Downloads</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value" id="stat-size">25MB</div>
+                                    <div class="stat-name">Size</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value" id="stat-category">Apps</div>
+                                    <div class="stat-name">Category</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Requirements -->
+                        <div class="detail-section">
+                            <h3>Requirements</h3>
+                            <div class="requirements-list">
+                                <div class="requirement-item">
+                                    <span class="requirement-label">Android Version</span>
+                                    <span class="requirement-value" id="req-android">5.0+</span>
+                                </div>
+                                <div class="requirement-item">
+                                    <span class="requirement-label">Developer</span>
+                                    <span class="requirement-value" id="req-developer">Developer Name</span>
+                                </div>
+                                <div class="requirement-item">
+                                    <span class="requirement-label">Last Updated</span>
+                                    <span class="requirement-value" id="req-updated">2024-01-15</span>
+                                </div>
+                                <div class="requirement-item">
+                                    <span class="requirement-label">Package Name</span>
+                                    <span class="requirement-value" id="req-package">com.example.app</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Download Section -->
+                        <div class="detail-section">
+                            <h3>Download</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                                Click the button below to download the latest version of this app.
+                            </p>
+                            <a href="#" id="sidebar-download-btn" class="btn-download-main" style="width: 100%;">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"></path>
+                                </svg>
+                                <span>Download APK</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">MODMASTER</span>
+                        <span class="logo-subtitle">Created by Ishant Webworks</span>
+                    </div>
+                    <p>Your ultimate destination for premium mod APKs. Download safely and enjoy enhanced features.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#apps">Apps</a></li>
+                        <li><a href="index.html#games">Games</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Official Links</h3>
+                    <ul>
+                        <li><a href="https://ishant.shop" target="_blank">Official Website</a></li>
+                        <li><a href="https://blogs.ishant.shop" target="_blank">Blog</a></li>
+                        <li><a href="mailto:ishant150407@gmail.com">Email Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#disclaimer">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MODMASTER - Created by Ishant Webworks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Tutorial Modal -->
+    <div class="modal" id="tutorial-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2>How to Download & Install</h2>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe id="tutorial-video" width="100%" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="tutorial-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Enable Unknown Sources</h3>
+                            <p>Go to Settings > Security > Unknown Sources and enable it</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Download APK</h3>
+                            <p>Click the download button and wait for the file to download</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Install & Enjoy</h3>
+                            <p>Open the downloaded APK file and install it on your device</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // App Detail Page JavaScript
+        class AppDetailPage {
+            constructor() {
+                this.appData = null;
+                this.init();
+            }
+
+            async init() {
+                await this.loadAppData();
+                this.initializeEventListeners();
+                this.renderAppDetails();
+            }
+
+            async loadAppData() {
+                try {
+                    // Get app ID from URL parameters
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const appId = urlParams.get('id');
+                    
+                    if (!appId) {
+                        this.redirectToHome();
+                        return;
+                    }
+
+                    // Load data from JSON
+                    const response = await fetch('data.json');
+                    const data = await response.json();
+                    
+                    // Find the specific app
+                    this.appData = data.apps.find(app => app.id == appId);
+                    
+                    if (!this.appData) {
+                        this.redirectToHome();
+                        return;
+                    }
+                } catch (error) {
+                    console.error('Error loading app data:', error);
+                    this.redirectToHome();
+                }
+            }
+
+            redirectToHome() {
+                window.location.href = 'index.html';
+            }
+
+            initializeEventListeners() {
+                // Tutorial button
+                document.getElementById('tutorial-btn').addEventListener('click', () => {
+                    this.openTutorialModal();
+                });
+
+                // Modal close
+                document.getElementById('modal-close').addEventListener('click', () => {
+                    this.closeTutorialModal();
+                });
+
+                // Close modal on outside click
+                document.getElementById('tutorial-modal').addEventListener('click', (e) => {
+                    if (e.target.id === 'tutorial-modal') {
+                        this.closeTutorialModal();
+                    }
+                });
+
+                // Download tracking
+                document.querySelectorAll('[id$="download-btn"]').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        this.trackDownload();
+                    });
+                });
+
+                // Mobile menu toggle
+                const menuToggle = document.getElementById('menu-toggle');
+                const navMenu = document.getElementById('nav-menu');
+                
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+            }
+
+            renderAppDetails() {
+                if (!this.appData) return;
+
+                // Update page title and meta tags
+                this.updateSEO();
+
+                // Update breadcrumb
+                document.getElementById('breadcrumb-category').textContent = 
+                    this.appData.category.charAt(0).toUpperCase() + this.appData.category.slice(1);
+                document.getElementById('breadcrumb-app').textContent = this.appData.name;
+
+                // Update app header
+                document.getElementById('app-icon').src = this.appData.icon;
+                document.getElementById('app-icon').alt = this.appData.name;
+                document.getElementById('app-name').textContent = this.appData.name;
+                document.getElementById('app-version').textContent = this.appData.version;
+                document.getElementById('app-size').textContent = this.appData.size;
+                document.getElementById('app-downloads').textContent = this.appData.downloads;
+                document.getElementById('app-rating').textContent = this.appData.rating;
+                document.getElementById('app-short-description').textContent = this.appData.description;
+
+                // Update download buttons
+                const downloadUrl = this.appData.downloadUrl;
+                document.getElementById('download-btn').href = downloadUrl;
+                document.getElementById('sidebar-download-btn').href = downloadUrl;
+
+                // Update main content
+                document.getElementById('app-long-description').textContent = 
+                    this.appData.longDescription || this.appData.description;
+
+                // Update features
+                this.renderFeatures();
+
+                // Update sidebar stats
+                document.getElementById('stat-rating').textContent = this.appData.rating;
+                document.getElementById('stat-downloads').textContent = this.appData.downloads;
+                document.getElementById('stat-size').textContent = this.appData.size;
+                document.getElementById('stat-category').textContent = 
+                    this.appData.category.charAt(0).toUpperCase() + this.appData.category.slice(1);
+
+                // Update requirements
+                document.getElementById('req-android').textContent = this.appData.requirements || 'Android 5.0+';
+                document.getElementById('req-developer').textContent = this.appData.developer || 'Unknown';
+                document.getElementById('req-updated').textContent = this.appData.updated || '2024-01-01';
+                document.getElementById('req-package').textContent = 
+                    `com.${this.appData.name.toLowerCase().replace(/\s+/g, '')}.mod`;
+
+                // Update screenshots
+                this.renderScreenshots();
+            }
+
+            renderFeatures() {
+                const featuresGrid = document.getElementById('features-grid');
+                if (!this.appData.features || this.appData.features.length === 0) {
+                    featuresGrid.innerHTML = '<p style="color: var(--text-secondary);">No features listed.</p>';
+                    return;
+                }
+
+                featuresGrid.innerHTML = this.appData.features.map(feature => `
+                    <div class="feature-item">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>${feature}</span>
+                    </div>
+                `).join('');
+            }
+
+            renderScreenshots() {
+                const screenshotsContainer = document.getElementById('app-screenshots');
+                
+                // For demo purposes, we'll use the app image as screenshots
+                // In a real implementation, you'd have multiple screenshot URLs
+                const screenshots = [
+                    this.appData.image,
+                    this.appData.image,
+                    this.appData.image
+                ];
+
+                screenshotsContainer.innerHTML = screenshots.map((screenshot, index) => `
+                    <img src="${screenshot}" alt="${this.appData.name} Screenshot ${index + 1}" 
+                         class="screenshot" loading="lazy" onclick="this.style.transform = this.style.transform ? '' : 'scale(1.5)'">
+                `).join('');
+            }
+
+            updateSEO() {
+                const title = `${this.appData.name} v${this.appData.version} - Download Mod APK | MODMASTER`;
+                const description = this.appData.description;
+                const keywords = `${this.appData.name}, mod apk, ${this.appData.category}, android, free download, ${this.appData.features.join(', ')}`;
+                const url = window.location.href;
+                const image = this.appData.image;
+
+                // Update title
+                document.title = title;
+                document.getElementById('app-title').content = title;
+
+                // Update meta tags
+                document.getElementById('app-description').content = description;
+                document.getElementById('app-keywords').content = keywords;
+
+                // Update Open Graph tags
+                document.getElementById('og-title').content = title;
+                document.getElementById('og-description').content = description;
+                document.getElementById('og-url').content = url;
+                document.getElementById('og-image').content = image;
+
+                // Update Twitter Card tags
+                document.getElementById('twitter-title').content = title;
+                document.getElementById('twitter-description').content = description;
+                document.getElementById('twitter-image').content = image;
+
+                // Update structured data
+                const structuredData = {
+                    "@context": "https://schema.org",
+                    "@type": "SoftwareApplication",
+                    "name": this.appData.name,
+                    "description": description,
+                    "applicationCategory": this.appData.category === 'games' ? 'GameApplication' : 'MobileApplication',
+                    "operatingSystem": "Android",
+                    "softwareVersion": this.appData.version,
+                    "fileSize": this.appData.size,
+                    "downloadUrl": this.appData.downloadUrl,
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": this.appData.rating,
+                        "ratingCount": "1000"
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "USD"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "MODMASTER",
+                        "url": "https://modmaster.github.io"
+                    }
+                };
+
+                document.getElementById('structured-data').textContent = JSON.stringify(structuredData);
+            }
+
+            openTutorialModal() {
+                const modal = document.getElementById('tutorial-modal');
+                const video = document.getElementById('tutorial-video');
+                
+                // Set tutorial video URL (you can get this from settings)
+                video.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+                
+                modal.style.display = 'block';
+            }
+
+            closeTutorialModal() {
+                const modal = document.getElementById('tutorial-modal');
+                const video = document.getElementById('tutorial-video');
+                
+                modal.style.display = 'none';
+                video.src = '';
+            }
+
+            trackDownload() {
+                // Analytics tracking
+                console.log(`Download tracked: ${this.appData.name}`);
+                
+                // You can add Google Analytics or other tracking here
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'download', {
+                        'event_category': 'engagement',
+                        'event_label': this.appData.name,
+                        'value': 1
+                    });
+                }
+            }
+        }
+
+        // Initialize the app detail page
+        const appDetailPage = new AppDetailPage();
+    </script>
+</body>
+</html>

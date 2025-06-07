@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODMASTER - Download Premium Mod APKs for Free</title>
+    <meta name="description" content="Download premium mod APKs for free at MODMASTER. Get unlimited coins, gems, and premium features for your favorite Android games and apps.">
+    <meta name="keywords" content="mod apk, android mods, free premium apps, modded games, unlimited coins, premium features">
+    <meta name="author" content="Ishant Webworks">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="MODMASTER - Download Premium Mod APKs for Free">
+    <meta property="og:description" content="Download premium mod APKs for free at MODMASTER. Get unlimited coins, gems, and premium features for your favorite Android games and apps.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://modmaster.github.io">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/1a1a2e/00f3ff?text=MODMASTER">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MODMASTER - Download Premium Mod APKs for Free">
+    <meta name="twitter:description" content="Download premium mod APKs for free at MODMASTER. Get unlimited coins, gems, and premium features.">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "MODMASTER",
+        "url": "https://modmaster.github.io",
+        "description": "Download premium mod APKs for free",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Ishant Webworks",
+            "url": "https://ishant.shop"
+        }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="cyber-loader">
+            <div class="cyber-circle"></div>
+            <div class="loading-text">MODMASTER</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <span class="logo-text">MODMASTER</span>
+                <span class="logo-subtitle">MOD APK HUB</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#apps" class="nav-link">Apps</a>
+                <a href="#games" class="nav-link">Games</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="search-btn" id="search-btn">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="M21 21l-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="search-overlay">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search for apps, games..." class="search-input">
+                <button class="search-close" id="search-close">&times;</button>
+            </div>
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg">
+                <div class="grid-overlay"></div>
+                <div class="floating-particles"></div>
+            </div>
+            
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="glitch" data-text="MODMASTER">MODMASTER</span>
+                </h1>
+                <p class="hero-subtitle">Download Premium Mod APKs for Free</p>
+                <p class="hero-description">
+                    Get unlimited coins, gems, and premium features for your favorite Android games and apps
+                </p>
+                
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="scrollToSection('apps')">
+                        <span>Explore Apps</span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M13 17l5-5-5-5M6 17l5-5-5-5"></path>
+                        </svg>
+                    </button>
+                    
+                    <button class="btn-secondary" id="tutorial-btn">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <polygon points="5,3 19,12 5,21"></polygon>
+                        </svg>
+                        <span>Watch Tutorial</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <div class="scroll-text">Scroll Down</div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">Mod APKs</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="1000000">0</div>
+                        <div class="stat-label">Downloads</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="50000">0</div>
+                        <div class="stat-label">Happy Users</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="99">0</div>
+                        <div class="stat-label">Uptime %</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apps Section -->
+        <section id="apps" class="apps-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Apps</h2>
+                    <p class="section-subtitle">Discover the most popular modded applications</p>
+                </div>
+                
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="apps">Apps</button>
+                    <button class="filter-tab" data-filter="games">Games</button>
+                    <button class="filter-tab" data-filter="education">Education</button>
+                    <button class="filter-tab" data-filter="tools">Tools</button>
+                </div>
+                
+                <div class="apps-grid" id="apps-grid">
+                    <!-- Apps will be loaded here dynamically -->
+                </div>
+                
+                <div class="load-more-container">
+                    <button class="btn-load-more" id="load-more-btn">
+                        <span>Load More</span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="apps-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Educational Apps</h2>
+                    <p class="section-subtitle">Learn and grow with premium educational content</p>
+                </div>
+                
+                <div class="apps-grid" id="education-grid">
+                    <!-- Education apps will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Request Apps</h2>
+                    <p class="section-subtitle">Can't find your favorite app? Request it here!</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <h3>Official Website</h3>
+                            <p><a href="https://ishant.shop" target="_blank">ishant.shop</a></p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:ishant150407@gmail.com">ishant150407@gmail.com</a></p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 19c-5 0-8-3-8-8s3-8 8-8 8 3 8 8-3 8-8 8z"></path>
+                                    <path d="M9 9h.01M9 12h6"></path>
+                                </svg>
+                            </div>
+                            <h3>Blog</h3>
+                            <p><a href="https://blogs.ishant.shop" target="_blank">blogs.ishant.shop</a></p>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" action="https://formsubmit.co/ishant150407@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="MODMASTER - App Request">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://modmaster.github.io/thank-you.html">
+                        
+                        <div class="form-group">
+                            <input type="text" name="name" required class="form-input" placeholder=" ">
+                            <label class="form-label">Your Name</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" name="email" required class="form-input" placeholder=" ">
+                            <label class="form-label">Email Address</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select name="request_type" required class="form-input">
+                                <option value="">Select Request Type</option>
+                                <option value="app">Request App</option>
+                                <option value="game">Request Game</option>
+                                <option value="education">Request Educational App</option>
+                                <option value="course">Request Course</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <label class="form-label">Request Type</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea name="message" required class="form-input form-textarea" placeholder=" " rows="5"></textarea>
+                            <label class="form-label">Your Message</label>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <span>Send Request</span>
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">About MODMASTER</h2>
+                        <p>MODMASTER is your ultimate destination for premium mod APKs. We provide carefully tested and verified modified applications that unlock premium features, unlimited resources, and enhanced gameplay experiences.</p>
+                        
+                        <p>Our team at Ishant Webworks ensures that every mod APK is safe, functional, and regularly updated. We believe in making premium features accessible to everyone while maintaining the highest standards of security and quality.</p>
+                        
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <polyline points="20,6 9,17 4,12"></polyline>
+                                </svg>
+                                <span>Tested & Verified Mods</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <polyline points="20,6 9,17 4,12"></polyline>
+                                </svg>
+                                <span>Regular Updates</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <polyline points="20,6 9,17 4,12"></polyline>
+                                </svg>
+                                <span>Safe Downloads</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <polyline points="20,6 9,17 4,12"></polyline>
+                                </svg>
+                                <span>24/7 Support</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-visual">
+                        <div class="cyber-card">
+                            <div class="card-glow"></div>
+                            <div class="card-content">
+                                <div class="cyber-logo">🎮</div>
+                                <h3>MODMASTER</h3>
+                                <p>Premium Mods Hub</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">MODMASTER</span>
+                        <span class="logo-subtitle">Created by Ishant Webworks</span>
+                    </div>
+                    <p>Your ultimate destination for premium mod APKs. Download safely and enjoy enhanced features.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#apps">Apps</a></li>
+                        <li><a href="#games">Games</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Official Links</h3>
+                    <ul>
+                        <li><a href="https://ishant.shop" target="_blank">Official Website</a></li>
+                        <li><a href="https://blogs.ishant.shop" target="_blank">Blog</a></li>
+                        <li><a href="mailto:ishant150407@gmail.com">Email Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#disclaimer">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MODMASTER - Created by Ishant Webworks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Tutorial Modal -->
+    <div class="modal" id="tutorial-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2>How to Download & Install</h2>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe id="tutorial-video" width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="tutorial-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Enable Unknown Sources</h3>
+                            <p>Go to Settings > Security > Unknown Sources and enable it</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Download APK</h3>
+                            <p>Click the download button and wait for the file to download</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Install & Enjoy</h3>
+                            <p>Open the downloaded APK file and install it on your device</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- App Detail Modal -->
+    <div class="modal" id="app-detail-modal">
+        <div class="modal-content modal-large">
+            <button class="modal-close" id="app-detail-close">&times;</button>
+            <div class="app-detail-content" id="app-detail-content">
+                <!-- App details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

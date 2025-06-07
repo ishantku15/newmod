@@ -1,0 +1,522 @@
+{
+  "settings": {
+    "siteName": "MODMASTER",
+    "siteDescription": "Download Premium Mod APKs for Free",
+    "primaryColor": "#00f3ff",
+    "secondaryColor": "#b829ff",
+    "accentColor": "#39ff14",
+    "tutorialVideoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "contactEmail": "ishant150407@gmail.com",
+    "officialWebsite": "https://ishant.shop",
+    "blogWebsite": "https://blogs.ishant.shop"
+  },
+  "categories": [
+    {
+      "id": 1,
+      "name": "apps",
+      "displayName": "Apps",
+      "description": "Mobile applications and utilities",
+      "icon": "📱",
+      "seoTitle": "Modded Android Apps - Download Premium APKs",
+      "seoDescription": "Download premium modded Android apps with unlocked features, ad-free experience, and enhanced functionality.",
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "games",
+      "displayName": "Games",
+      "description": "Mobile games and entertainment",
+      "icon": "🎮",
+      "seoTitle": "Modded Android Games - Unlimited Coins & Resources",
+      "seoDescription": "Download modded Android games with unlimited coins, gems, and premium features unlocked.",
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "tools",
+      "displayName": "Tools",
+      "description": "Utility applications and tools",
+      "icon": "🛠️",
+      "seoTitle": "Modded Android Tools - Enhanced Utility Apps",
+      "seoDescription": "Download modded Android tools and utility apps with premium features unlocked.",
+      "active": true
+    },
+    {
+      "id": 4,
+      "name": "education",
+      "displayName": "Education",
+      "description": "Educational apps and learning platforms",
+      "icon": "📚",
+      "seoTitle": "Modded Educational Apps - Premium Learning Features",
+      "seoDescription": "Download modded educational apps with premium courses, ad-free learning, and enhanced features.",
+      "active": true
+    }
+  ],
+  "navigation": [
+    {
+      "name": "Home",
+      "href": "#home",
+      "active": true
+    },
+    {
+      "name": "Apps",
+      "href": "#apps",
+      "active": false
+    },
+    {
+      "name": "Games",
+      "href": "#games",
+      "active": false
+    },
+    {
+      "name": "Education",
+      "href": "#education",
+      "active": false
+    },
+    {
+      "name": "Contact",
+      "href": "#contact",
+      "active": false
+    },
+    {
+      "name": "About",
+      "href": "#about",
+      "active": false
+    }
+  ],
+  "apps": [
+    {
+      "id": 1,
+      "name": "WhatsApp Plus",
+      "version": "17.25.0",
+      "category": "apps",
+      "description": "Enhanced WhatsApp with additional features like custom themes, privacy options, and extended file sharing capabilities. Experience the ultimate messaging app with unlimited customization.",
+      "longDescription": "WhatsApp Plus is a modified version of the popular messaging app that brings you features that the official app doesn't offer. With custom themes, enhanced privacy controls, and the ability to share larger files, WhatsApp Plus transforms your messaging experience. You can hide your online status, disable read receipts, and enjoy a completely ad-free experience.",
+      "features": [
+        "Custom Themes & Colors",
+        "Enhanced Privacy Controls",
+        "Extended File Sharing (100MB)",
+        "Hide Online Status",
+        "Disable Read Receipts",
+        "No Advertisements",
+        "Message Scheduler",
+        "Auto Reply Feature"
+      ],
+      "icon": "https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+      "image": "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+      "downloadUrl": "https://drive.google.com/file/d/1example_whatsapp_plus",
+      "imageUrl": "https://drive.google.com/file/d/1example_whatsapp_image",
+      "rating": 4.5,
+      "downloads": "10M+",
+      "size": "25MB",
+      "updated": "2024-01-15",
+      "requirements": "Android 5.0+",
+      "developer": "WhatsApp Plus Team",
+      "featured": true,
+      "trending": true,
+      "tags": ["messaging", "social", "communication", "privacy"],
+      "seo": {
+        "title": "WhatsApp Plus v17.25.0 - Download Modded WhatsApp APK",
+        "description": "Download WhatsApp Plus APK with custom themes, privacy controls, and extended file sharing. Enhanced messaging experience with unlimited features.",
+        "keywords": "whatsapp plus, modded whatsapp, whatsapp mod, custom themes, privacy features, file sharing",
+        "slug": "whatsapp-plus-modded-apk"
+      }
+    },
+    {
+      "id": 2,
+      "name": "YouTube Vanced",
+      "version": "18.05.40",
+      "category": "apps",
+      "description": "Ad-free YouTube experience with background playback, sponsor block, and enhanced video quality options. Enjoy YouTube like never before without interruptions.",
+      "longDescription": "YouTube Vanced is the ultimate YouTube experience that removes all the limitations of the official app. With built-in ad blocking, background playback, and sponsor segment skipping, you can enjoy your favorite content without any interruptions. The app also includes themes, enhanced video quality controls, and picture-in-picture mode.",
+      "features": [
+        "Complete Ad Blocking",
+        "Background Playback",
+        "Sponsor Block Integration",
+        "Enhanced Video Quality",
+        "Picture-in-Picture Mode",
+        "Dark & AMOLED Themes",
+        "Repeat Video Function",
+        "Preferred Resolution Settings"
+      ],
+      "icon": "https://images.pexels.com/photos/1540177/pexels-photo-1540177.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+      "image": "https://images.pexels.com/photos/1540177/pexels-photo-1540177.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+      "downloadUrl": "https://drive.google.com/file/d/1example_youtube_vanced",
+      "imageUrl": "https://drive.google.com/file/d/1example_youtube_image",
+      "rating": 4.8,
+      "downloads": "50M+",
+      "size": "45MB",
+      "updated": "2024-01-20",
+      "requirements": "Android 6.0+",
+      "developer": "Vanced Team",
+      "featured": true,
+      "trending": true,
+      "tags": ["video", "streaming", "entertainment", "ad-free"],
+      "seo": {
+        "title": "YouTube Vanced v18.05.40 - Ad-Free YouTube Mod APK",
+        "description": "Download YouTube Vanced APK with ad blocking, background playback, and sponsor block. Ultimate YouTube experience without interruptions.",
+        "keywords": "youtube vanced, ad free youtube, background playback, sponsor block, youtube mod",
+        "slug": "youtube-vanced-ad-free-apk"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Subway Surfers Mod",
+      "version": "3.15.0",
+      "category": "games",
+      "description": "Endless running game with unlimited coins, keys, and all characters unlocked for the ultimate gaming experience. Run as far as you can in this colorful adventure.",
+      "longDescription": "Subway Surfers Mod brings you the complete endless running experience with all premium features unlocked. Race through the subway tracks, collect coins, and unlock amazing characters and hoverboards. With unlimited resources, you can enjoy the game to its fullest potential without any restrictions.",
+      "features": [
+        "Unlimited Coins & Keys",
+        "All Characters Unlocked",
+        "All Hoverboards Available",
+        "Unlimited Energy",
+        "No Advertisements",
+        "Enhanced Graphics",
+        "All Outfits Unlocked",
+        "Mega Headstart Available"
+      ],
+      "icon": "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+      "image": "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+      "downloadUrl": "https://drive.google.com/file/d/1example_subway_surfers",
+      "imageUrl": "https://drive.google.com/file/d/1example_subway_image",
+      "rating": 4.6,
+      "downloads": "100M+",
+      "size": "120MB",
+      "updated": "2024-01-18",
+      "requirements": "Android 4.4+",
+      "developer": "SYBO Games",
+      "featured": true,
+      "trending": false,
+      "tags": ["endless runner", "arcade", "adventure", "casual"],
+      "seo": {
+        "title": "Subway Surfers Mod v3.15.0 - Unlimited Coins & Keys APK",
+        "description": "Download Subway Surfers Mod APK with unlimited coins, keys, and all characters unlocked. Ultimate endless running experience.",
+        "keywords": "subway surfers mod, unlimited coins, subway surfers hack, endless runner, modded game",
+        "slug": "subway-surfers-unlimited-mod-apk"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Spotify Premium",
+      "version": "8.7.96.345",
+      "category": "apps",
+      "description": "Music streaming app with premium features unlocked including offline downloads, ad-free listening, and unlimited skips. Your music, your way.",
+      "longDescription": "Spotify Premium Mod gives you access to the world's largest music library without any restrictions. Enjoy high-quality audio streaming, download music for offline listening, and skip as many songs as you want. With no ads interrupting your music experience, you can focus on what matters most - the music.",
+      "features": [
+        "Premium Features Unlocked",
+        "Offline Music Downloads",
+        "No Advertisements",
+        "Unlimited Song Skips",
+        "High Quality Audio (320kbps)",
+        "Shuffle Play Disabled",
+        "Repeat Single Songs",
+        "Access to Spotify Connect"
+      ],
+      "icon": "https://images.pexels.com/photos/167092/pexels-photo-167092.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+      "image": "https://images.pexels.com/photos/167092/pexels-photo-167092.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+      "downloadUrl": "https://drive.google.com/file/d/1example_spotify_premium",
+      "imageUrl": "https://drive.google.com/file/d/1example_spotify_image",
+      "rating": 4.7,
+      "downloads": "75M+",
+      "size": "35MB",
+      "updated": "2024-01-22",
+      "requirements": "Android 5.0+",
+      "developer": "Spotify AB",
+      "featured": true,
+      "trending": true,
+      "tags": ["music", "streaming", "audio", "premium"],
+      "seo": {
+        "title": "Spotify Premium v8.7.96.345 - Premium Music Streaming APK",
+        "description": "Download Spotify Premium APK with offline downloads, ad-free listening, and unlimited skips. Premium music streaming experience.",
+        "keywords": "spotify premium, ad free music, offline downloads, music streaming, spotify mod",
+        "slug": "spotify-premium-mod-apk"
+      }
+    },
+    {
+      "id": 5,
+      "name": "PUBG Mobile Lite Mod",
+      "version": "0.24.0",
+      "category": "games",
+      "description": "Battle royale game optimized for lower-end devices with enhanced graphics, unlimited UC, and premium skins unlocked. Survive to be the last player standing.",
+      "longDescription": "PUBG Mobile Lite Mod is specifically designed for devices with lower specifications while providing the complete battle royale experience. With enhanced graphics settings, unlimited UC currency, and all premium skins unlocked, you can dominate the battlefield in style. The game features anti-ban protection and optimized performance.",
+      "features": [
+        "Enhanced Graphics Settings",
+        "Unlimited UC Currency",
+        "All Premium Skins Unlocked",
+        "Anti-Ban Protection",
+        "Optimized Performance",
+        "All Weapons Available",
+        "Premium Crates Unlocked",
+        "No Root Required"
+      ],
+      "icon": "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+      "image": "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+      "downloadUrl": "https://drive.google.com/file/d/1example_pubg_mobile",
+      "imageUrl": "https://drive.google.com/file/d/1example_pubg_image",
+      "rating": 4.4,
+      "downloads": "200M+",
+      "size": "650MB",
+      "updated": "2024-01-25",
+      "requirements": "Android 4.0.3+",
+      "developer": "Tencent Games",
+      "featured": false,
+      "trending": true,
+      "tags": ["battle royale", "shooter", "multiplayer", "action"],
+      "seo": {
+        "title": "PUBG Mobile Lite Mod v0.24.0 - Unlimited UC & Skins APK",
+        "description": "Download PUBG Mobile Lite Mod APK with unlimited UC, premium skins, and enhanced graphics. Battle royale gaming experience.",
+        "keywords": "pubg mobile lite mod, unlimited uc, pubg hack, battle royale, pubg skins",
+        "slug": "pubg-mobile-lite-unlimited-uc-mod"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Instagram Plus",
+      "version": "275.0.0.27.98",
+      "category": "apps",
+      "description": "Enhanced Instagram with story download, profile viewing, zoom photos, and additional privacy features. Experience Instagram with more control and features.",
+      "longDescription": "Instagram Plus is a modified version of Instagram that adds powerful features for power users. Download stories and posts, view profiles anonymously, zoom into photos with ease, and enjoy enhanced privacy controls. The app maintains all the original Instagram functionality while adding features that users have been requesting.",
+      "features": [
+        "Download Stories & Posts",
+        "Anonymous Profile Viewing",
+        "Photo Zoom Functionality",
+        "Enhanced Privacy Controls",
+        "No Advertisements",
+        "Copy Profile Bio & Captions",
+        "View Full Size Profile Pictures",
+        "Disable Read Receipts for DMs"
+      ],
+      "icon": "https://images.pexels.com/photos/965345/pexels-photo-965345.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+      "image": "https://images.pexels.com/photos/965345/pexels-photo-965345.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+      "downloadUrl": "https://drive.google.com/file/d/1example_instagram_plus",
+      "imageUrl": "https://drive.google.com/file/d/1example_instagram_image",
+      "rating": 4.3,
+      "downloads": "30M+",
+      "size": "55MB",
+      "updated": "2024-01-20",
+      "requirements": "Android 5.0+",
+      "developer": "Instagram Plus Team",
+      "featured": false,
+      "trending": false,
+      "tags": ["social media", "photography", "sharing", "privacy"],
+      "seo": {
+        "title": "Instagram Plus v275.0.0.27.98 - Enhanced Instagram Mod APK",
+        "description": "Download Instagram Plus APK with story download, profile viewing, and enhanced privacy features. Ultimate Instagram experience.",
+        "keywords": "instagram plus, instagram mod, story download, profile viewer, instagram privacy",
+        "slug": "instagram-plus-enhanced-features-apk"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Netflix Mod",
+      "version": "8.95.0",
+      "category": "apps",
+      "description": "Premium Netflix experience with 4K streaming, no ads, and access to all regions content. Watch your favorite shows and movies in the highest quality.",
+      "longDescription": "Netflix Mod provides you with the ultimate streaming experience, giving you access to premium features without subscription limits. Enjoy 4K Ultra HD streaming, download content for offline viewing, and access content from different regions. The app removes all advertisements and provides a seamless viewing experience.",
+      "features": [
+        "4K Ultra HD Streaming",
+        "Premium Account Features",
+        "All Regions Content Access",
+        "Offline Download Capability",
+        "No Advertisements",
+        "Multiple Profile Support",
+        "Enhanced Video Quality",
+        "Unlimited Streaming"
+      ],
+      "icon": "https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+      "image": "https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+      "downloadUrl": "https://drive.google.com/file/d/1example_netflix_mod",
+      "imageUrl": "https://drive.google.com/file/d/1example_netflix_image",
+      "rating": 4.6,
+      "downloads": "25M+",
+      "size": "85MB",
+      "updated": "2024-01-24",
+      "requirements": "Android 5.0+",
+      "developer": "Netflix Inc.",
+      "featured": true,
+      "trending": true,
+      "tags": ["streaming", "movies", "tv shows", "entertainment"],
+      "seo": {
+        "title": "Netflix Mod v8.95.0 - Premium 4K Streaming APK",
+        "description": "Download Netflix Mod APK with 4K streaming, premium features, and access to all regions content. Ultimate streaming experience.",
+        "keywords": "netflix mod, 4k streaming, netflix premium, streaming app, movies tv shows",
+        "slug": "netflix-premium-4k-streaming-mod"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Clash of Clans Mod",
+      "version": "15.292.6",
+      "category": "games",
+      "description": "Strategy game with unlimited gems, gold, and elixir. Build your village, train your army, and battle with players from around the world with unlimited resources.",
+      "longDescription": "Clash of Clans Mod brings you the complete strategy gaming experience with unlimited resources. Build and upgrade your village faster, train powerful armies, and participate in clan wars without worrying about resource management. The mod includes unlimited gems, gold, and elixir, allowing you to focus on strategy rather than grinding.",
+      "features": [
+        "Unlimited Gems & Gold",
+        "Unlimited Elixir & Dark Elixir",
+        "All Buildings Unlocked",
+        "Instant Build & Upgrade",
+        "No Waiting Time",
+        "All Troops Available",
+        "Private Server Access",
+        "Anti-Ban Protection"
+      ],
+      "icon": "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+      "image": "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+      "downloadUrl": "https://drive.google.com/file/d/1example_clash_of_clans",
+      "imageUrl": "https://drive.google.com/file/d/1example_clash_image",
+      "rating": 4.5,
+      "downloads": "80M+",
+      "size": "180MB",
+      "updated": "2024-01-23",
+      "requirements": "Android 4.1+",
+      "developer": "Supercell",
+      "featured": false,
+      "trending": false,
+      "tags": ["strategy", "multiplayer", "building", "war"],
+      "seo": {
+        "title": "Clash of Clans Mod v15.292.6 - Unlimited Gems & Resources APK",
+        "description": "Download Clash of Clans Mod APK with unlimited gems, gold, and elixir. Build your village with unlimited resources.",
+        "keywords": "clash of clans mod, unlimited gems, clash of clans hack, strategy game, unlimited resources",
+        "slug": "clash-of-clans-unlimited-gems-mod"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Duolingo Plus",
+      "version": "5.92.4",
+      "category": "education",
+      "description": "Learn languages for free with Duolingo Plus. Premium features unlocked including offline lessons, no ads, and unlimited hearts for uninterrupted learning.",
+      "longDescription": "Duolingo Plus provides the ultimate language learning experience with all premium features unlocked. Learn over 40 languages with interactive lessons, speaking exercises, and personalized learning paths. With no ads, offline access, and unlimited hearts, you can focus entirely on mastering new languages at your own pace.",
+      "features": [
+        "Premium Features Unlocked",
+        "Offline Lesson Downloads",
+        "No Advertisements",
+        "Unlimited Hearts",
+        "Progress Quizzes",
+        "Streak Freeze",
+        "Bonus Skills",
+        "Monthly Progress Reports"
+      ],
+      "icon": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+      "image": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+      "downloadUrl": "https://drive.google.com/file/d/1example_duolingo_plus",
+      "imageUrl": "https://drive.google.com/file/d/1example_duolingo_image",
+      "rating": 4.7,
+      "downloads": "15M+",
+      "size": "75MB",
+      "updated": "2024-01-26",
+      "requirements": "Android 5.0+",
+      "developer": "Duolingo",
+      "featured": true,
+      "trending": true,
+      "tags": ["language learning", "education", "premium", "offline"],
+      "seo": {
+        "title": "Duolingo Plus v5.92.4 - Premium Language Learning APK",
+        "description": "Download Duolingo Plus APK with premium features, offline lessons, and unlimited hearts. Learn 40+ languages for free.",
+        "keywords": "duolingo plus, language learning, duolingo premium, offline lessons, learn languages",
+        "slug": "duolingo-plus-premium-language-learning"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Khan Academy",
+      "version": "7.4.1",
+      "category": "education",
+      "description": "Free world-class education with Khan Academy. Access thousands of courses, practice exercises, and educational videos with premium features unlocked.",
+      "longDescription": "Khan Academy provides free access to world-class education in subjects ranging from math and science to history and economics. This modded version unlocks premium features including offline video downloads, advanced progress tracking, and ad-free learning experience. Perfect for students, teachers, and lifelong learners.",
+      "features": [
+        "Offline Video Downloads",
+        "No Advertisements",
+        "Advanced Progress Tracking",
+        "Unlimited Practice Exercises",
+        "Premium Study Tools",
+        "Personalized Learning Dashboard",
+        "Achievement Badges",
+        "Parent/Teacher Reports"
+      ],
+      "icon": "https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+      "image": "https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+      "downloadUrl": "https://drive.google.com/file/d/1example_khan_academy",
+      "imageUrl": "https://drive.google.com/file/d/1example_khan_image",
+      "rating": 4.8,
+      "downloads": "20M+",
+      "size": "95MB",
+      "updated": "2024-01-28",
+      "requirements": "Android 5.0+",
+      "developer": "Khan Academy",
+      "featured": true,
+      "trending": false,
+      "tags": ["education", "courses", "learning", "math", "science"],
+      "seo": {
+        "title": "Khan Academy v7.4.1 - Free World-Class Education APK",
+        "description": "Download Khan Academy APK with offline videos, ad-free learning, and premium features. Access thousands of free courses.",
+        "keywords": "khan academy, free education, online courses, math learning, science education",
+        "slug": "khan-academy-premium-education-app"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Coursera Plus",
+      "version": "4.33.1",
+      "category": "education",
+      "description": "Access university courses and professional certificates with Coursera Plus. Premium subscription unlocked with unlimited access to specializations and degrees.",
+      "longDescription": "Coursera Plus gives you unlimited access to over 7,000 courses, specializations, and professional certificates from top universities and companies. This modded version unlocks the premium subscription, allowing you to earn certificates, download content for offline viewing, and access exclusive course materials without subscription fees.",
+      "features": [
+        "Premium Subscription Unlocked",
+        "Unlimited Course Access",
+        "Professional Certificates",
+        "Offline Course Downloads",
+        "University Partnerships",
+        "Guided Projects",
+        "Career Services",
+        "No Subscription Fees"
+      ],
+      "icon": "https://images.pexels.com/photos/301926/pexels-photo-301926.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop",
+      "image": "https://images.pexels.com/photos/301926/pexels-photo-301926.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+      "downloadUrl": "https://drive.google.com/file/d/1example_coursera_plus",
+      "imageUrl": "https://drive.google.com/file/d/1example_coursera_image",
+      "rating": 4.6,
+      "downloads": "8M+",
+      "size": "120MB",
+      "updated": "2024-01-27",
+      "requirements": "Android 6.0+",
+      "developer": "Coursera Inc.",
+      "featured": false,
+      "trending": true,
+      "tags": ["university courses", "certificates", "professional development", "online learning"],
+      "seo": {
+        "title": "Coursera Plus v4.33.1 - University Courses & Certificates APK",
+        "description": "Download Coursera Plus APK with unlimited access to university courses and professional certificates. Premium education unlocked.",
+        "keywords": "coursera plus, university courses, online certificates, professional development, coursera premium",
+        "slug": "coursera-plus-university-courses-certificates"
+      }
+    }
+  ],
+  "stats": {
+    "totalApps": 500,
+    "totalDownloads": 1000000,
+    "happyUsers": 50000,
+    "uptime": 99
+  },
+  "footer": {
+    "copyright": "© 2024 MODMASTER - Created by Ishant Webworks. All rights reserved.",
+    "quickLinks": [
+      { "name": "Home", "href": "#home" },
+      { "name": "Apps", "href": "#apps" },
+      { "name": "Games", "href": "#games" },
+      { "name": "Education", "href": "#education" },
+      { "name": "Contact", "href": "#contact" }
+    ],
+    "officialLinks": [
+      { "name": "Official Website", "href": "https://ishant.shop" },
+      { "name": "Blog", "href": "https://blogs.ishant.shop" },
+      { "name": "Email Support", "href": "mailto:ishant150407@gmail.com" }
+    ],
+    "legalLinks": [
+      { "name": "Privacy Policy", "href": "#privacy" },
+      { "name": "Terms of Service", "href": "#terms" },
+      { "name": "Disclaimer", "href": "#disclaimer" }
+    ]
+  }
+}
